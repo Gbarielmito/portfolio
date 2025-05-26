@@ -284,6 +284,7 @@ section.sobre .flex{
 .sobre .txt-sobre p{
     margin: 20px 0;
     text-align: justify;
+    font-size: 1.1rem;
 }
 
 .sobre .txt-sobre .btn-social button{
@@ -359,6 +360,9 @@ section.precos{
     padding: 80px 4%;
     background-color: rgba(10,10,10,0.92);
     margin: 40px 0;
+    animation: fadeInUp 0.8s ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 section.precos .flex{
@@ -1129,4 +1133,20 @@ html, body {
     font-size: 1.2rem;
     margin-top: 2px;
     font-weight: 600;
+}
+
+/* Animações de scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
