@@ -317,6 +317,73 @@ section.portfolio .flex{
     box-shadow: 0 0 8px #fff;
 }
 
+section.precos{
+    padding: 80px 4%;
+    background-color: #0a0a0a;
+    margin: 40px 0;
+}
+
+section.precos .flex{
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.preco-box{
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid #ffffff05;
+    transition: .2s;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 600px;
+}
+
+.preco-box.destaque{
+    transform: scale(1.05);
+    border: 2px solid #00ff08;
+}
+
+.preco-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #00ff08;
+}
+
+.preco-box h3{
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.preco-box .valor{
+    color: #00ff08;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.preco-box ul{
+    list-style-type: none;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.preco-box ul li{
+    color: #fff;
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.preco-box .btn-contato{
+    margin-top: auto;
+}
+
 section.formulario{
     padding: 80px 4%;
 }
@@ -440,6 +507,12 @@ form .btn-enviar input:hover{
         gap: 60px;
     }
     
-
+    .preco-box{
+        width: 100%;
+        max-width: 300px;
+    }
     
+    .preco-box.destaque{
+        transform: scale(1);
+    }
 }
