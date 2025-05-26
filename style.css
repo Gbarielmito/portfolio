@@ -1091,3 +1091,42 @@ html, body {
     max-width: 100vw;
     overflow-x: hidden;
 }
+
+.icones-sociais {
+    display: flex;
+    align-items: center;
+    gap: 32px; /* Espaço entre os ícones */
+    justify-content: center; /* Centraliza na tela */
+}
+
+.icone-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icone-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00ff08;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 6px;
+    text-decoration: none;
+    transition: box-shadow 0.3s;
+}
+
+.icone-social a:hover {
+    box-shadow: 0 0 12px #00ff08;
+}
+
+.icone-social span {
+    color: #fff !important;
+    font-size: 1.2rem;
+    margin-top: 2px;
+    font-weight: 600;
+}
