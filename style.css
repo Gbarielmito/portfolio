@@ -4,17 +4,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
 body{
     background-color: #000;
     height: 100vh;
+    line-height: 1.6;
 }
 
 .interface{
     max-width: 1280px;
     margin: 0 auto;
+    padding: 0 2%;
 }
 
 .flex{
@@ -22,20 +24,42 @@ body{
 }
 
 .btn-contato button{
-    padding: 10px 40px;
-    font-size: 18px;
+    padding: 12px 40px;
+    font-size: 16px;
     font-weight: 600;
     background-color: #00ff08;
     border: 0;
     border-radius: 30px;
     cursor: pointer;
-    transition: .2s;
+    transition: .3s;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-contato button i{
+    font-size: 20px;
 }
 
 h2.titulo{
     color: #fff;
     font-size: 38px;
     text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+h2.titulo::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #00ff08;
 }
 
 h2.titulo span{
@@ -45,7 +69,14 @@ h2.titulo span{
 /* Estilo De Cabeçalho */
 
 header{
-    padding: 40px 4%;
+    padding: 12px 4%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
 }
 
 header>.interface{
@@ -55,14 +86,15 @@ header>.interface{
 }
 
 header a{
-    color: #5c5c5c;
+    color: #fff;
     text-decoration: none;
     display: inline-block;
-    transition: .2s;
+    transition: .3s;
+    font-weight: 500;
 }
 
 header.menu-desktop a:hover{
-    color: #fff;
+    color: #00ff08;
     transform: scale(1.05);
 }
 
@@ -148,7 +180,7 @@ header nav.menu-desktop ul li{
 /* ESTILO DO TOPO DO SITE */
 
 section.topo-do-site{
-    padding: 40px 4%;
+    padding: 160px 4% 80px 4%;
 }
 
 section.topo-do-site .flex{
@@ -160,7 +192,8 @@ section.topo-do-site .flex{
 .topo-do-site h1{
     color: #fff;
     font-size: 42px;
-    line-height: 40px;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
 .topo-do-site .txt-topo-site h1 span{
@@ -170,6 +203,8 @@ section.topo-do-site .flex{
 .topo-do-site .txt-topo-site p{
     color: #fff;
     margin: 40px 0;
+    font-size: 18px;
+    opacity: 0.9;
 }
 
 .topo-do-site .img-topo-site img{
@@ -187,7 +222,8 @@ section.topo-do-site .flex{
 }
 
 section.especialidades{
-    padding: 40px 4%;
+    padding: 80px 4%;
+    background: rgba(10,10,10,0.92);
 }
 
 section.especialidades .flex{
@@ -201,12 +237,13 @@ section.especialidades .flex{
     border-radius: 20px;
     border: 2px solid #ffffff05;
     margin-top: 45px;
-    transition: .2s;
+    transition: .3s;
+    background-color: rgba(255, 255, 255, 0.02);
 }
 
 .especialidades .especialidades-box:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 8px #fff;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 255, 8, 0.1);
 }
 
 .especialidades .especialidades-box i{
@@ -319,7 +356,7 @@ section.portfolio .flex{
 
 section.precos{
     padding: 80px 4%;
-    background-color: #0a0a0a;
+    background-color: rgba(10,10,10,0.92);
     margin: 40px 0;
 }
 
@@ -331,11 +368,11 @@ section.precos .flex{
 }
 
 .preco-box{
-    background-color: #1a1a1a;
+    background-color: rgba(255, 255, 255, 0.02);
     padding: 40px;
     border-radius: 20px;
     border: 2px solid #ffffff05;
-    transition: .2s;
+    transition: .3s;
     width: 300px;
     text-align: center;
     margin-bottom: 20px;
@@ -343,22 +380,25 @@ section.precos .flex{
     flex-direction: column;
     justify-content: space-between;
     min-height: 600px;
+    backdrop-filter: blur(10px);
 }
 
 .preco-box.destaque{
     transform: scale(1.05);
     border: 2px solid #00ff08;
+    background-color: rgba(0, 255, 8, 0.05);
 }
 
 .preco-box:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 8px #00ff08;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 255, 8, 0.1);
 }
 
 .preco-box h3{
     color: #fff;
     font-size: 24px;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .preco-box .valor{
@@ -378,14 +418,29 @@ section.precos .flex{
     color: #fff;
     margin: 15px 0;
     font-size: 16px;
+    opacity: 0.9;
 }
 
 .preco-box .btn-contato{
     margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.preco-box .btn-contato button{
+    width: auto;
+    min-width: 160px;
+    max-width: 100%;
+    padding: 15px 40px;
+    margin: 0 auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section.formulario{
     padding: 80px 4%;
+    background: rgba(10,10,10,0.92);
 }
 
 form{
@@ -394,25 +449,30 @@ form{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     margin-top: 40px;
-
 }
 
 form input, form textarea{
     width: 100%;
-    background-color: #242424;
-    border: 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     outline: 0;
     padding: 20px 15px;
     border-radius: 15px;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
+    transition: .3s;
+}
+
+form input:focus, form textarea:focus{
+    border-color: #00ff08;
+    box-shadow: 0 0 10px rgba(0, 255, 8, 0.1);
 }
 
 form textarea{
     resize: none;
-    
+    min-height: 150px;
 }
 
 form .btn-enviar{
@@ -426,16 +486,16 @@ form .btn-enviar input{
     color: #000;
     font-weight: 700;
     cursor: pointer;
-    transition: .2s;
+    transition: .3s;
+    padding: 15px 30px;
 }
 
 form .btn-enviar input:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 8px #00ff08;
+    box-shadow: 0 0 20px rgba(0, 255, 8, 0.3);
 }
 
 @media screen and (max-width: 1020px){
-
     .flex{
         flex-direction: column;
     }
@@ -449,18 +509,17 @@ form .btn-enviar input:hover{
         display: none;
     }
 
-    h1.topo-do-site{
-        color: #fff;
-        font-size: 42px;
-        line-height: 40px;
-    }
-
     section.topo-do-site{
-        padding: 20px 8%;
+        padding: 120px 8% 40px 8%;
     }
 
     .topo-do-site h1{
         font-size: 30px;
+        text-align: center;
+    }
+
+    .topo-do-site .txt-topo-site p{
+        text-align: center;
     }
 
     .topo-do-site .img-topo-site img{
@@ -471,48 +530,310 @@ form .btn-enviar input:hover{
         gap: 40px;
     }
 
-    section.especialiadades{
-        padding: 40px 8%;
-    }
-
-    section.sobre{
-        padding: 80px 8%;
-    }
-
-    .sobre .txt-sobre h2{
-        font-size: 34px;
-        line-height: 35px;
-        text-align: center;
-    }
-
-    .btn-social{
-        text-align: center;
-    }
-
-    .img-sobre img{
-        width: 100%;
-    }
-
-    section.portfolio{
-        padding: 80px 8%;
-    }
-
-    .img-port{
-        width: 100%;
-        max-width: 360px;
-        margin: 0 auto;
-    }
-
-    section.portfolio .flex{
-        gap: 60px;
-    }
-    
     .preco-box{
         width: 100%;
         max-width: 300px;
+        margin: 0 auto 30px auto;
     }
     
     .preco-box.destaque{
         transform: scale(1);
     }
+
+    form{
+        padding: 0 20px;
+    }
+
+    .bg-icons i {
+        font-size: 40px !important;
+    }
+}
+
+@media screen and (min-width: 1021px) {
+    .btn-abrir-menu {
+        display: none !important;
+    }
+}
+
+/* === ANIMAÇÕES === */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 1.2s ease forwards;
+    opacity: 0;
+}
+
+.slide-up {
+    animation: slideUp 1.2s cubic-bezier(.23,1.01,.32,1) forwards;
+    opacity: 0;
+}
+
+/* Pulse nos botões */
+.btn-contato button, .btn-enviar input {
+    transition: .3s, box-shadow .3s;
+}
+
+.btn-contato button:hover, .btn-enviar input:hover {
+    animation: pulse 0.5s;
+    box-shadow: 0 0 20px #00ff08, 0 0 40px #00ff0822;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.07); }
+    100% { transform: scale(1); }
+}
+
+.bg-icons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bg-icons i {
+    position: absolute;
+    color: #00ff33cc;
+    opacity: 0.18;
+    font-size: 110px;
+    transition: transform 1s cubic-bezier(.23,1.01,.32,1);
+    animation: floatIcon 6s ease-in-out infinite alternate;
+}
+
+.bg-icons i:nth-child(1) {
+    top: 10%;
+    left: 8%;
+    animation-delay: 0s;
+}
+.bg-icons i:nth-child(2) {
+    top: 60%;
+    left: 15%;
+    font-size: 100px;
+    animation-delay: 1s;
+}
+.bg-icons i:nth-child(3) {
+    top: 30%;
+    right: 10%;
+    font-size: 70px;
+    animation-delay: 2s;
+}
+.bg-icons i:nth-child(4) {
+    bottom: 12%;
+    left: 60%;
+    font-size: 90px;
+    animation-delay: 3s;
+}
+.bg-icons i:nth-child(5) {
+    top: 75%;
+    right: 18%;
+    font-size: 110px;
+    animation-delay: 4s;
+}
+
+@keyframes floatIcon {
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(-30px) scale(1.08) rotate(-8deg); }
+}
+
+section.depoimentos {
+    padding: 80px 4%;
+    background: rgba(10,10,10,0.92);
+}
+
+section.depoimentos .flex {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    gap: 24px;
+}
+section.depoimentos .flex::-webkit-scrollbar {
+    display: none;
+}
+.depoimentos-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.depoimentos-nav button {
+    background: #00ff08;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    color: #000;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.depoimentos-nav button:hover {
+    background: #00cc06;
+}
+
+.depoimento-box {
+    min-width: 31.5%;
+    max-width: 31.5%;
+    flex: 0 0 31.5%;
+    margin: 0;
+    background: rgba(255,255,255,0.03);
+    border: 2px solid #00ff0822;
+    border-radius: 20px;
+    padding: 40px 30px 30px 30px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 24px 0 #00ff0810;
+    transition: transform .3s, box-shadow .3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.depoimento-box:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 32px 0 #00ff0840;
+}
+
+.depoimento-box img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    border: 2px solid #00ff08;
+    object-fit: cover;
+}
+
+.depoimento-box h3 {
+    color: #00ff08;
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.depoimento-box p {
+    font-size: 16px;
+    opacity: 0.92;
+    font-style: italic;
+}
+
+@media (max-width: 1100px) {
+    .depoimento-box {
+        min-width: 32.5vw;
+        max-width: 32.5vw;
+        flex: 0 0 32.5vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .depoimento-box {
+        min-width: 90vw;
+        max-width: 90vw;
+        flex: 0 0 90vw;
+    }
+}
+
+.bg-icons.visivel-depoimentos i {
+    opacity: 0.35 !important;
+    color: #00ff55ee !important;
+    transition: opacity 0.5s, color 0.5s;
+}
+
+.depoimentos-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    gap: 0;
+    max-width: 1080px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.depoimentos-carousel .flex {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+}
+.depo-btn {
+    background: #00ff08;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    color: #000;
+    font-size: 26px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.depo-btn:hover {
+    background: #00cc06;
+    transform: scale(1.1);
+}
+.depo-btn-left {
+    margin-right: 10px;
+}
+.depo-btn-right {
+    margin-left: 10px;
+}
+@media (max-width: 900px) {
+    .depo-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 22px;
+    }
+}
+
+#preloader {
+    position: fixed;
+    z-index: 99999;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s;
+}
+.preloader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+.preloader-spinner {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #00ff08;
+    border-top: 5px solid #222;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+#preloader span {
+    color: #00ff08;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+#preloader.preloader-hide {
+    opacity: 0;
+    pointer-events: none;
 }

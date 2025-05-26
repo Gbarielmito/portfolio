@@ -9,9 +9,23 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="menu.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Agencia GMJ</title>
 </head>
 <body>
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-spinner"></div>
+            <span>Carregando o site...</span>
+        </div>
+    </div>
+    <div class="bg-icons">
+        <i class="bi bi-code-slash"></i>
+        <i class="bi bi-laptop"></i>
+        <i class="bi bi-brush"></i>
+        <i class="bi bi-lightning"></i>
+        <i class="bi bi-github"></i>
+    </div>
     <header>
         <div class="interface">
             <div class="logo">
@@ -29,7 +43,7 @@
 
             <div class="btn-contato">
                 <a href="#">
-                    <a href="https://api.whatsapp.com/send/?phone=5575991707131&text&type=phone_number&app_absent=0"><button>Contato</button></a>
+                    <a href="https://api.whatsapp.com/send/?phone=5575991707131&text&type=phone_number&app_absent=0"><button><i class="bi bi-whatsapp"></i> Contato</button></a>
                 </a>
             </div>
 
@@ -60,7 +74,7 @@
     </header>
 
     <main>
-        <section class="topo-do-site">
+        <section class="topo-do-site fade-in">
             <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-site">
@@ -84,11 +98,11 @@
             </div>
         </section>
 
-        <section class="especialidades">
+        <section class="especialidades fade-in">
             <div class="interface">
                 <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
                 <div class="flex">
-                    <div class="especialidades-box">
+                    <div class="especialidades-box slide-up">
                         <i class="bi bi-code-slash"></i>
                         <h3>WEBSITE</h3>
                         <p>1 Ano de experiência em desenvolvimento de websites,
@@ -97,7 +111,7 @@
                             Participou de projetos bem-sucedidos, incluindo PetStore,
                             Apaixonado por aprender e aplicar as melhores práticas do setor.</p>
                     </div>
-                    <div class="especialidades-box">
+                    <div class="especialidades-box slide-up">
                         <i class="bi bi-bag"></i>
                         <h3>DSIGNER</h3>
                         <p>Tenho 2 anos de experiência no mercado digital como designer,
@@ -106,7 +120,7 @@
                             Trabalhei em projetos que exigiram criatividade e atenção aos detalhes, garantindo a satisfação dos clientes,
                             Sempre atualizado com as tendências de design para oferecer soluções inovadoras e funcionais.</p>
                     </div>
-                    <div class="especialidades-box">
+                    <div class="especialidades-box slide-up">
                         <i class="bi bi-journal-code"></i>
                         <h3>JORNADA</h3>
                         <p>Sou formado em Desenvolvimento De Software Tecnologo pelo SENAI,Tambem estou cursando Engenharia De Software no Centro Universitário UNIFAN,
@@ -120,7 +134,7 @@
             </div>
         </section>
 
-        <section class="sobre">
+        <section class="sobre fade-in">
             <div class="interface">
                 <div class="flex">
                     <div class="img-sobre">
@@ -128,9 +142,9 @@
                     </div>
 
                     <div class="txt-sobre">
-                        <h2>MUITO PRAZER,
+                        <h2>MUITO PRAZER
                         <span>SOU GABRIEL MAIA.</span></h2>
-                        <p>Sou um profissional versátil com experiência em publicidade e programação. Durante 1 ano, atuei na Agência Pórtico, colaborando com equipes criativas para planejar e executar campanhas internacionais, onde consegui reduzir o tempo de produção em 30% e aumentar o ROI dos clientes em 20%. Além disso, como programador, desenvolvi jogos educativos na Educa Studios utilizando tecnologias como Java, JavaScript, AWS, .NET, Python, HTML, SQL, CSS e C#. Meu foco sempre foi escrever códigos otimizados, o que resultou em uma redução de 31% nos bugs. Estou pronto para aplicar minha criatividade e habilidades técnicas para gerar resultados ainda mais expressivos na sua empresa.</p>
+                        <p>Sou um profissional versátil com sólida experiência em desenvolvimento de software, com foco na criação de soluções eficientes e de alto impacto. Atuei como programador em diversos projetos, com Linguagens como Java, JavaScript, Python, .NET, AWS, HTML, CSS, SQL e C#, sempre priorizando a qualidade e a otimização do código, o que resultou na redução de 31% nos bugs. Contribuindo para projetos digitais internacionais e aprimorando processos. Estou preparado para aplicar minha experiência em programação e gerar resultados expressivos em novos desafios.</p>
 
                         <div class="btn-social">
                             <a href="https://www.instagram.com/biellmaia01/" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
@@ -143,7 +157,7 @@
             </div>
         </section>
 
-        <section class="portfolio">
+        <section class="portfolio fade-in">
             <div class="interface">
                 <h2 class="titulo">MEUS <span>PROJETOS</span></h2>
                 <div class="flex">
@@ -161,11 +175,11 @@
             </div>
         </section>
 
-        <section class="precos">
+        <section class="precos fade-in">
             <div class="interface">
-                <h2 class="titulo">MEUS <span>PREÇOS.</span></h2>
+                <h2 class="titulo">MEUS <span>SERVIÇOS.</span></h2>
                 <div class="flex">
-                    <div class="preco-box">
+                    <div class="preco-box slide-up">
                         <h3>Website Básico</h3>
                         <div class="valor">R$ 600.00</div>
                         <ul>
@@ -176,13 +190,13 @@
                             <li>Suporte por 30 dias</li>
                         </ul>
                         <div class="btn-contato">
-                            <a href="https://api.whatsapp.com/send/?phone=5575991707131&text&type=phone_number&app_absent=0">
+                            <a href="https://w.app/agenciagmj" target="_blank">
                                 <button>Contratar</button>
                             </a>
                         </div>
                     </div>
 
-                    <div class="preco-box destaque">
+                    <div class="preco-box destaque slide-up">
                         <h3>Website Profissional</h3>
                         <div class="valor">R$ 1.500</div>
                         <ul>
@@ -194,13 +208,13 @@
                             <li>Suporte por 60 dias</li>
                         </ul>
                         <div class="btn-contato">
-                            <a href="https://api.whatsapp.com/send/?phone=5575991707131&text&type=phone_number&app_absent=0">
+                            <a href="https://w.app/agenciagmjproficional" target="_blank">
                                 <button>Contratar</button>
                             </a>
                         </div>
                     </div>
 
-                    <div class="preco-box">
+                    <div class="preco-box slide-up">
                         <h3>Website E-commerce</h3>
                         <div class="valor">R$ 2.500</div>
                         <ul>
@@ -212,7 +226,7 @@
                             <li>Suporte por 90 dias</li>
                         </ul>
                         <div class="btn-contato">
-                            <a href="https://api.whatsapp.com/send/?phone=5575991707131&text&type=phone_number&app_absent=0">
+                            <a href="https://w.app/agenciagmjecomerce" target="_blank">
                                 <button>Contratar</button>
                             </a>
                         </div>
@@ -221,7 +235,49 @@
             </div>
         </section>
 
-        <section class="formulario">
+        <section class="depoimentos fade-in">
+            <div class="interface">
+                <h2 class="titulo">O QUE DIZEM <span>SOBRE MIM</span></h2>
+                <div class="depoimentos-carousel">
+                    <button class="depo-btn depo-btn-left" id="depo-prev"><i class="bi bi-chevron-left"></i></button>
+                    <div class="flex">
+                        <div class="depoimento-box slide-up">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente 1">
+                            <h3>João Silva</h3>
+                            <p>"O Gabriel superou todas as expectativas! Meu site ficou incrível, rápido e com um design moderno. Recomendo demais!"</p>
+                        </div>
+                        <div class="depoimento-box slide-up">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente 2">
+                            <h3>Ana Souza</h3>
+                            <p>"Profissionalismo e atenção do início ao fim. O suporte após a entrega foi excelente. Estou muito satisfeita!"</p>
+                        </div>
+                        <div class="depoimento-box slide-up">
+                            <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Cliente 3">
+                            <h3>Carlos Mendes</h3>
+                            <p>"Serviço de alta qualidade, entrega rápida e comunicação clara. Meu negócio online decolou depois do novo site!"</p>
+                        </div>
+                        <div class="depoimento-box slide-up">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente 4">
+                            <h3>Mariana Lima</h3>
+                            <p>"O Gabriel foi super atencioso, entendeu exatamente o que eu queria e entregou um site acima do esperado. Recomendo de olhos fechados!"</p>
+                        </div>
+                        <div class="depoimento-box slide-up">
+                            <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="Cliente 5">
+                            <h3>Felipe Torres</h3>
+                            <p>"Além de muito criativo, o Gabriel é rápido e transparente. Meu site ficou lindo e funcional. Excelente profissional!"</p>
+                        </div>
+                        <div class="depoimento-box slide-up">
+                            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Cliente 6">
+                            <h3>Patrícia Gomes</h3>
+                            <p>"A comunicação com o Gabriel foi sempre clara e eficiente. Ele trouxe ótimas ideias e o resultado ficou incrível. Voltarei a contratar!"</p>
+                        </div>
+                    </div>
+                    <button class="depo-btn depo-btn-right" id="depo-next"><i class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="formulario fade-in">
             <div class="interface">
                 <h2 class="titulo">FALA <span>COMIGO.</span></h2>
 
@@ -237,4 +293,5 @@
     </main>
     
 </body>
+<script src="scriptsdosite.js"></script>
 </html>
