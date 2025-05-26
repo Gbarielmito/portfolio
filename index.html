@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="menu.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='64' height='64' rx='16' fill='black'/%3E%3Cpath d='M36 8L16 36H30L28 56L48 28H34L36 8Z' fill='%2300ff08' stroke='white' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E">
     <title>Agencia GMJ</title>
 </head>
 <body>
@@ -42,9 +43,7 @@
             </nav>
 
             <div class="btn-contato">
-                <a href="#">
-                    <a href="https://api.whatsapp.com/send/?phone=5575991707131&text&type=phone_number&app_absent=0"><button><i class="bi bi-whatsapp"></i> Contato</button></a>
-                </a>
+                <a href="https://api.whatsapp.com/send/?phone=5575991707131&text&type=phone_number&app_absent=0"><button><i class="bi bi-whatsapp"></i> Contato</button></a>
             </div>
 
             <div class="btn-abrir-menu" id="btn-menu">
@@ -85,8 +84,8 @@
                         </p>
 
                         <div class="btn-contato">
-                            <a href="#">
-                                <a href="https://api.whatsapp.com/send/?phone=5575991707131&text&type=phone_number&app_absent=0"><button>Entrar em contato</button></a>
+                            <a class="btn-contato-link" href="https://api.whatsapp.com/send/?phone=5575991707131&text&type=phone_number&app_absent=0">
+                                Entrar em contato
                             </a>
                         </div>
                     </div>
@@ -281,11 +280,12 @@
             <div class="interface">
                 <h2 class="titulo">FALA <span>COMIGO.</span></h2>
 
-                <form action="">
-                    <input type="text" name="" id="" placeholder="Seu Nome Completo" required>
-                    <input type="text" name="" id="" placeholder="Digite seu email" required>
-                    <input type="text" name="" id="" placeholder="Digite o seu numero">
-                    <textarea name="" id="" placeholder="Sua Mensagem" required></textarea>
+                <form action="https://formsubmit.co/ulight56@gmail.com" method="POST">
+                    <input type="text" name="nome" placeholder="Seu Nome Completo" required>
+                    <input type="email" name="email" placeholder="Digite seu email" required>
+                    <input type="text" name="telefone" placeholder="Digite o seu número">
+                    <input type="hidden" name="_next" value="https://portfolio-bice-theta-81.vercel.app/">
+                    <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
                     <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
                 </form>
             </div>
