@@ -156,4 +156,23 @@ document.addEventListener('DOMContentLoaded', function() {
             btnAbrir.parentElement.style.display = 'none';
         });
     }
+
+    const animatedElements = document.querySelectorAll('.slide-up, .fade-in');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+                // Remove observer para não animar de novo
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    animatedElements.forEach(el => {
+        // Inicialmente, deixa invisível e deslocado
+        el.style.opacity = 0;
+        el.style.transform = 'translateY(40px)';
+        observer.observe(el);
+    });
 });

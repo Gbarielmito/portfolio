@@ -631,9 +631,10 @@ form .btn-enviar input:hover{
     opacity: 0;
 }
 
-.slide-up {
-    animation: slideUp 1.2s cubic-bezier(.23,1.01,.32,1) forwards;
+.slide-up, .fade-in {
     opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1.2s cubic-bezier(.23,1.01,.32,1), transform 1.2s cubic-bezier(.23,1.01,.32,1);
 }
 
 /* Pulse nos botões */
