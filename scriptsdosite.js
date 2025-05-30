@@ -124,3 +124,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const btnAbrir = document.getElementById('abrir-mais-servicos');
+    const modal = document.getElementById('modal-mais-servicos');
+    const btnFechar = document.getElementById('fechar-modal-mais-servicos');
+
+    if (btnAbrir && modal && btnFechar) {
+        btnAbrir.addEventListener('click', function() {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+        btnFechar.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        });
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+    if (btnAbrir) {
+        btnAbrir.addEventListener('click', function() {
+            var linha2 = document.getElementById('portfolio-cards-linha2');
+            if (linha2) {
+                linha2.classList.remove('oculto');
+            }
+            btnAbrir.parentElement.style.display = 'none';
+        });
+    }
+});

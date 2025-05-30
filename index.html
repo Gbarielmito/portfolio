@@ -170,7 +170,7 @@
         <section class="portfolio fade-in" id="servicos">
             <div class="interface">
                 <h2 class="titulo">MEUS <span>SERVIÇOS</span></h2>
-                <div class="flex">
+                <div class="flex" id="portfolio-cards-linha1">
                     <div class="img-port" style="background-image: url(./images/screencapture-lojaiphone-vercel-app-2025-04-07-22_12_09.jpg);">
                         <a href="https://lojaiphone.vercel.app/" target="_blank"><div class="overlay">Serviço UniMarket</div></a>
                     </div>
@@ -179,7 +179,20 @@
                     </div>
                     <div class="img-port" style="background-image: url(./images/workbank.png);">
                         <a href="https://work-bank.vercel.app/" target="_blank"><div class="overlay">Serviço WorkBank</div></a>
-                        
+                    </div>
+                </div>
+                <div class="btn-mais-servicos-portfolio">
+                    <button id="abrir-mais-servicos" type="button"><i class="bi bi-plus-circle"></i> Mais Serviços</button>
+                </div>
+                <div class="flex mais-servicos-linha oculto" id="portfolio-cards-linha2">
+                    <div class="img-port mais-servico-card" style="background-image: url(./images/exemplo1.png);">
+                        <a href="#" target="_blank"><div class="overlay">Serviço Landing Page</div></a>
+                    </div>
+                    <div class="img-port mais-servico-card" style="background-image: url(./images/exemplo2.png);">
+                        <a href="#" target="_blank"><div class="overlay">Serviço Blog Profissional</div></a>
+                    </div>
+                    <div class="img-port mais-servico-card" style="background-image: url(./images/exemplo3.png);">
+                        <a href="#" target="_blank"><div class="overlay">Serviço Portal Corporativo</div></a>
                     </div>
                 </div>
             </div>
@@ -191,7 +204,6 @@
                 <div class="flex">
                     <div class="preco-box slide-up">
                         <h3>Website Básico</h3>
-                        <div class="valor">R$ 600.00</div>
                         <ul>
                             <li>Design Responsivo</li>
                             <li>Até 5 páginas</li>
@@ -201,14 +213,13 @@
                         </ul>
                         <div class="btn-contato">
                             <a href="https://w.app/agenciagmj" target="_blank">
-                                <button>Contratar</button>
+                                <button><i class="bi bi-check-circle"></i> Contratar</button>
                             </a>
                         </div>
                     </div>
 
                     <div class="preco-box destaque slide-up">
                         <h3>Website Profissional</h3>
-                        <div class="valor">R$ 1.500</div>
                         <ul>
                             <li>Design Responsivo Premium</li>
                             <li>Até 10 páginas</li>
@@ -219,14 +230,13 @@
                         </ul>
                         <div class="btn-contato">
                             <a href="https://w.app/agenciagmjproficional" target="_blank">
-                                <button>Contratar</button>
+                                <button><i class="bi bi-check-circle"></i> Contratar</button>
                             </a>
                         </div>
                     </div>
 
                     <div class="preco-box slide-up">
                         <h3>Website E-commerce</h3>
-                        <div class="valor">R$ 2.500</div>
                         <ul>
                             <li>Design Responsivo Premium</li>
                             <li>Sistema de Pagamentos</li>
@@ -237,7 +247,7 @@
                         </ul>
                         <div class="btn-contato">
                             <a href="https://w.app/agenciagmjecomerce" target="_blank">
-                                <button>Contratar</button>
+                                <button><i class="bi bi-check-circle"></i> Contratar</button>
                             </a>
                         </div>
                     </div>
@@ -306,7 +316,6 @@
             </div>
         </section>
     </main>
-    
 </body>
 <script src="scriptsdosite.js"></script>
 </html>
